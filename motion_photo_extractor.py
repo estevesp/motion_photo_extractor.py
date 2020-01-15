@@ -3,9 +3,6 @@ import binascii
 INPUT_JPG_FILE_NAME = "input.jpg"
 OUTPUT_JPG_FILE_NAME = "output.jpg"
 OUTPUT_MPG_FILE_NAME = "output.mpg"
-SCALE = 16 ## equals to hexadecimal
-NUM_OF_BITS = 8
-
 
 with open(INPUT_JPG_FILE_NAME, 'rb') as JPG_FILE:
     BINARY_FILE_CONTENT = JPG_FILE.read()
@@ -22,10 +19,3 @@ with open(OUTPUT_JPG_FILE_NAME, "wb") as JPG_FILE:
 
 with open(OUTPUT_MPG_FILE_NAME, "wb") as MPG_FILE:
     MPG_FILE.write(DECODED_MPG)
-
-BIN_JPG_FILE = bin(int(HEX_ARRAY[0], SCALE))[2:].zfill(NUM_OF_BITS)
-BIN_MPG_FILE = bin(int(HEX_ARRAY[1], SCALE))[2:].zfill(NUM_OF_BITS)
-
-with open("TEST.JPG", "wb") as JPG_FILE:
-    JPG_FILE.write(BIN_JPG_FILE)
-
