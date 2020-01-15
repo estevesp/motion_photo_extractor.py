@@ -1,6 +1,6 @@
 import binascii
 
-INPUT_JPG_FILE_NAME = "20200115_123802.jpg"
+INPUT_JPG_FILE_NAME = "input.jpg"
 OUTPUT_JPG_FILE_NAME = "output.jpg"
 OUTPUT_MPG_FILE_NAME = "output.mpg"
 SCALE = 16 ## equals to hexadecimal
